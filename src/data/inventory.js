@@ -1,4 +1,4 @@
-const SHOP_DATA = {
+const INVENTORY_DATA = {
   'groceries': {
     id: 1,
     title: 'Groceries & Staples',
@@ -329,4 +329,4 @@ const SHOP_DATA = {
   }
 };
 
-export default SHOP_DATA;
+export default INVENTORY_DATA;

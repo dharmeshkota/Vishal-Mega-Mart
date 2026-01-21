@@ -335,7 +335,6 @@ const shopData = {
 
 function CollectionPage() {
     const { category } = useParams();
-    console.log("Category: ", category);
     const collection = shopData[category];
 
     if (!collection) {

@@ -1,4 +1,4 @@
-import DASHBOARD_DATA from "../../dashboard-data";
+import DASHBOARD_DATA from "../../data/dashboard-data";
 import DashboardItem from '../dashboard-item/dashboard-item.component';
 import './dashboard.styles.css';
 

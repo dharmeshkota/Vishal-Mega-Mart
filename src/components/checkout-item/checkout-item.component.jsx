@@ -12,14 +12,14 @@ function CheckoutItem({ item, onRemove, onAdd, onReduce }) {
             <div className="quantity-container">
                 <button 
                     className="quantity-btn" 
-                    onClick={() => onReduce(id)}
+                    onClick={() => onReduce(item)}
                 >
                     -
                 </button>
                 <span className="quantity-value price-tag">{quantity}</span>
                 <button 
                     className="quantity-btn" 
-                    onClick={() => onAdd(id)}
+                    onClick={() => onAdd(item)}
                 >
                     +
                 </button>
@@ -27,7 +27,7 @@ function CheckoutItem({ item, onRemove, onAdd, onReduce }) {
             <span className="item-price price-tag">₹{price * quantity}</span>
             <button 
                 className="remove-button" 
-                onClick={() => onRemove(id)}
+                onClick={() => onRemove(item)}
             >
                 ✕
             </button>

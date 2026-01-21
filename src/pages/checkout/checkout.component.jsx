@@ -1,8 +1,14 @@
+import { useContext } from 'react';
+import { CartContext } from '../../context/cart.context';
+
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
 import OrderSummary from '../../components/order-summary/order-summary.component';
 import './checkout.styles.css';
 
-function CheckoutPage({ cartItems, onRemoveItem, onAddItem, onReduceItem }) {
+function CheckoutPage() {
+
+    const {cartItems, addItem, removeItem, reduceItem} = useContext(CartContext);
+
     return (
         <div className="checkout-page">
             <div className="checkout-container">
@@ -26,9 +32,9 @@ function CheckoutPage({ cartItems, onRemoveItem, onAddItem, onReduceItem }) {
                                 <CheckoutItem
                                     key={item.id}
                                     item={item}
-                                    onRemove={onRemoveItem}
-                                    onAdd={onAddItem}
-                                    onReduce={onReduceItem}
+                                    onRemove={removeItem}
+                                    onAdd={addItem}
+                                    onReduce={reduceItem}
                                 />
                             ))}
                         </div>
