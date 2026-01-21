@@ -21,7 +21,7 @@ function CartDropdown({ cartItems, toggleCart }) {
                 <div className="cart-footer">
                     <div className="total">
                         <span>Total:</span>
-                        <span className="total-price">₹{total.toFixed(2)}</span>
+                        <span className="total-price price-tag">₹{total.toFixed(2)}</span>
                     </div>
                     <Link to={"/checkout"} className="checkout-button" onClick={() => toggleCart()}>
                         GO TO CHECKOUT
