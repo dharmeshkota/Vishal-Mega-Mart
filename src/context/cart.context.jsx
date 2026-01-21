@@ -21,9 +21,9 @@ export const CartProvider = ({ children }) => {
     const { isHidden, cartItems } = state;
 
     const toggleHidden = () => dispatch({ type: 'TOGGLE_HIDDEN' });
-    const addItem = (itemId) => dispatch({ type: 'ADD_ITEM', payload: itemId });
-    const removeItem = (itemId) => dispatch({ type: 'REMOVE_ITEM', payload: itemId });
-    const reduceItem = (itemId) => dispatch({ type: 'REDUCE_ITEM', payload: itemId });
+    const addItem = (item) => dispatch({ type: 'ADD_ITEM', payload: item });
+    const removeItem = (item) => dispatch({ type: 'CLEAR_ITEM', payload: item });
+    const reduceItem = (item) => dispatch({ type: 'REDUCE_ITEM', payload: item });
 
     const value = {
         isHidden,

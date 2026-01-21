@@ -1,4 +1,6 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+
 import { CartContext } from '../../context/cart.context';
 
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
