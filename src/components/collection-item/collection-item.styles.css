@@ -1,0 +1,146 @@
+.collection-item {
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+    background-color: #ffffffff;
+    border: 1px solid #e5e5e5ff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.collection-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(20, 33, 61, 0.15);
+    border-color: #14213dff;
+}
+
+.item-image-container {
+    width: 100%;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    background-color: #e5e5e5ff;
+}
+
+.item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
+
+.collection-item:hover .item-image {
+    transform: scale(1.1);
+}
+
+.add-to-cart-btn {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    padding: 12px;
+    background-color: #ffffffff;
+    color: #14213dff;
+    border: 1px solid #14213dff;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.collection-item:hover .add-to-cart-btn {
+    bottom: 15px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #14213dff;
+    color: #ffffffff;
+    border-color: #14213dff;
+}
+
+.add-to-cart-btn:active {
+    background-color: #fca311ff;
+    color: #14213dff;
+    border-color: #fca311ff;
+}
+
+.item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffffffff;
+    gap: 10px;
+}
+
+.item-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: #14213dff;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.4;
+}
+
+.item-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fca311ff;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .collection-item {
+        height: 340px;
+    }
+
+    .item-image-container {
+        height: 240px;
+    }
+
+    .item-footer {
+        padding: 12px;
+    }
+
+    .item-name {
+        font-size: 14px;
+    }
+
+    .item-price {
+        font-size: 15px;
+    }
+
+    .add-to-cart-btn {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .collection-item {
+        height: 320px;
+    }
+
+    .item-image-container {
+        height: 220px;
+    }
+
+    .item-footer {
+        padding: 10px;
+    }
+
+    .item-name {
+        font-size: 13px;
+    }
+
+    .item-price {
+        font-size: 14px;
+    }
+}

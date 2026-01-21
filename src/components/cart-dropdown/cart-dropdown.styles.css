@@ -1,0 +1,118 @@
+.cart-dropdown {
+    position: absolute;
+    width: 340px;
+    max-height: 480px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid #14213dff;
+    background-color: #ffffffff;
+    top: 50px;
+    right: 0;
+    z-index: 5;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+.cart-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #14213dff;
+}
+
+.cart-items {
+    max-height: 340px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+.cart-items::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cart-items::-webkit-scrollbar-track {
+    background: #e5e5e5ff;
+    border-radius: 3px;
+}
+
+.cart-items::-webkit-scrollbar-thumb {
+    background: #14213dff;
+    border-radius: 3px;
+}
+
+.cart-items::-webkit-scrollbar-thumb:hover {
+    background: #fca311ff;
+}
+
+.empty-message {
+    font-size: 18px;
+    margin: 50px auto;
+    color: #4a4a4a;
+    text-align: center;
+}
+
+.cart-footer {
+    border-top: 2px solid #e5e5e5ff;
+    padding-top: 15px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #14213dff;
+}
+
+.total-price {
+    color: #fca311ff;
+    font-size: 20px;
+}
+
+.checkout-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #14213dff;
+    color: #ffffffff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: #fca311ff;
+    color: #14213dff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(252, 163, 17, 0.3);
+}
+
+@media (max-width: 480px) {
+    .cart-dropdown {
+        width: 280px;
+        padding: 15px;
+    }
+
+    .total {
+        font-size: 16px;
+    }
+
+    .total-price {
+        font-size: 18px;
+    }
+}

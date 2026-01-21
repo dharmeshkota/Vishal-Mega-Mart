@@ -1,0 +1,121 @@
+.menu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--prussian-blue); /* Updated Variable */
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: var(--white); /* Updated Variable */
+}
+
+/* --- 4. The "Crazy" Mosaic Layout --- */
+/* Item 1 (Groceries): Big Tall Tower on Left */
+.menu-item:nth-child(1) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+/* Item 2 (Snacks): Wide Banner on Top Right */
+.menu-item:nth-child(2) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+/* Item 3 (Beverages): Standard Box */
+.menu-item:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* Item 4 (Household): Standard Box */
+.menu-item:nth-child(4) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* Item 5 (Personal Care): Wide Footer Bar */
+.menu-item:nth-child(5) {
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
+/* --- 5. Content & Hover Effects --- */
+.background-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
+
+.content {
+    height: auto; 
+    padding: 15px 25px;
+    background-color: rgba(255, 255, 255, 0.9); /* Kept semi-transparent white manually for readability */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--prussian-blue); /* Updated Variable */
+    transform: skewX(-10deg); 
+    transition: all 0.3s ease;
+}
+
+.content .title, .content .subtitle {
+    transform: skewX(10deg);
+}
+
+.content .title {
+    font-weight: 800;
+    margin: 0;
+    font-size: 22px;
+    color: var(--prussian-blue); /* Updated Variable */
+    text-transform: uppercase;
+}
+
+.content .subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 5px;
+    color: var(--black); /* Updated Variable */
+}
+
+/* --- Hover Actions --- */
+.menu-item:hover .background-image {
+    transform: scale(1.2) rotate(2deg);
+}
+
+.menu-item:hover .content {
+    background-color: var(--orange); /* Updated Variable */
+    opacity: 1;
+    transform: skewX(-10deg) scale(1.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-color: var(--orange); /* Seamless look on hover */
+}
+
+.menu-item:hover .content .title {
+    color: var(--prussian-blue); /* High contrast against orange */
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    #VishalMart {
+        height: auto;
+        overflow: visible;
+    }
+    
+    .directory-menu {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .menu-item:nth-child(n) {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: 250px;
+    }
+}

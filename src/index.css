@@ -1,0 +1,26 @@
+:root {
+    --black: #000000ff;
+    --prussian-blue: #14213dff;
+    --orange: #fca311ff;
+    --alabaster-grey: #e5e5e5ff;
+    --white: #ffffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+}
+
+.price-tag {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}

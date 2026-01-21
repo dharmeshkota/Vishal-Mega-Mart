@@ -1,0 +1,19 @@
+.collections-overview {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 80px;
+    background: linear-gradient(135deg, #e5e5e5ff 0%, #ffffff 100%);
+    min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .collections-overview {
+        padding: 20px 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .collections-overview {
+        padding: 15px 20px;
+    }
+}
